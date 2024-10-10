@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles/main.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <title>My Personal Website</title>
+    <style>
+        /* Styling for the navigation bar */
+        body {
+            font-family: Arial, sans-serif;
+        }
+
+        /* Header Styles */
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 20px;
+            background-color: #333;
+            color: white;
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 1.5em;
+            letter-spacing: 2px;
+        }
+
+        /* Navigation Bar Styles */
+        nav ul {
+            list-style: none;
+            display: flex;
+            margin: 0;
+            padding: 0;
+        }
+
+        nav ul li {
+            margin: 0 15px;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: white;
+            font-size: 1em;
+            letter-spacing: 1px;
+        }
+
+        nav ul li a:hover {
+            text-decoration: underline;
+        }
+
+        /* General Section Styles */
+        section {
+            padding: 20px;
+        }
+
+        /* Flexbox for images */
+        .image {
+            width: 500px;
+            height: auto;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+            margin: 20px 0;
+            max-width: 100%;
+        }
+    </style>
+</head>
+<body>
+
+<!-- Header Section -->
+<header>
+    <h1>JC</h1>
+    <nav>
+        <ul>
+            <li><a href="#home">HOME</a></li>
+            <li><a href="#about">ABOUT ME</a></li>
+            <li><a href="#projects">PROJECTS</a></li>
+            <li><a href="#skills">SKILLS</a></li>
+            <li><a href="#contact">CONTACT</a></li>
+        </ul>
+    </nav>
+</header>
+
+<!-- HOME -->
+<!-- Home Section -->
+<section id="home">
+    <!-- Introductory Box -->
+<div class="intro-box">
+    <h2>Julian's Personal Vlog</h2>
+    <p>Hello, I'm Julian Campo. Welcome to my personal website.</p>
+
+    <div class="contact-info">
+        <p>Connect with me:</p>
+        <div class="icon-links">
+            <a href="https://www.linkedin.com/in/yourprofile" target="_blank">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512" width="24" height="24">
+                    <path d="M579.8 267.7c56.5-56.5 56.5-148 0-204.5c-50-50-128.8-56.5-186.3-15.4l-1.6 1.1c-14.4 10.3-17.7 30.3-7.4 44.6s30.3 17.7 44.6 7.4l1.6-1.1c32.1-22.9 76-19.3 103.8 8.6c31.5 31.5 31.5 82.5 0 114L422.3 334.8c-31.5 31.5-82.5 31.5-114 0c-27.9-27.9-31.5-71.8-8.6-103.8l1.1-1.6c10.3-14.4 6.9-34.4-7.4-44.6s-34.4-6.9-44.6 7.4l-1.1 1.6C206.5 251.2 213 330 263 380c56.5 56.5 148 56.5 204.5 0L579.8 267.7zM60.2 244.3c-56.5 56.5-56.5 148 0 204.5c50 50 128.8 56.5 186.3 15.4l1.6-1.1c14.4-10.3 17.7-30.3 7.4-44.6s-30.3-17.7-44.6-7.4l-1.6 1.1c-32.1 22.9-76 19.3-103.8-8.6C74 372 74 321 105.5 289.5L217.7 177.2c31.5-31.5 82.5-31.5 114 0c27.9 27.9 31.5 71.8 8.6 103.9l-1.1 1.6c-10.3 14.4-6.9 34.4 7.4 44.6s34.4 6.9 44.6-7.4l1.1-1.6C433.5 260.8 427 182 377 132c-56.5-56.5-148-56.5-204.5 0L60.2 244.3z"/>
+                </svg>
+                <span>Julian Campo</span>
+            </a>
+            <a href="mailto:your_email@example.com">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="24" height="24">
+                    <path d="M64 112c-8.8 0-16 7.2-16 16l0 22.1L220.5 291.7c20.7 17 50.4 17 71.1 0L464 150.1l0-22.1c0-8.8-7.2-16-16-16L64 112zM48 212.2L48 384c0 8.8 7.2 16 16 16l384 0c8.8 0 16-7.2 16-16l0-171.8L322 328.8c-38.4 31.5-93.7 31.5-132 0L48 212.2zM0 128C0 92.7 28.7 64 64 64l384 0c35.3 0 64 28.7 64 64l0 256c0 35.3-28.7 64-64 64L64 448c-35.3 0-64-28.7-64-64L0 128z"/>
+                </svg>
+                <span>julian.123132@gmail.com</span>
+            </a>
+            <a href="tel:+1234567890">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="24" height="24">
+                    <path d="M164.9 24.6c-7.7-18.6-28-28.5-47.4-23.2l-88 24C12.1 30.2 0 46 0 64C0 311.4 200.6 512 448 512c18 0 33.8-12.1 38.6-29.5l24-88c5.3-19.4-4.6-39.7-23.2-47.4l-96-40c-16.3-6.8-35.2-2.1-46.3 11.6L304.7 368C234.3 334.7 177.3 277.7 144 207.3L193.3 167c13.7-11.2 18.4-30 11.6-46.3l-40-96z"/>
+                </svg>
+                <span>+1 (234) 567-890</span>
+            </a>
+            <a href="https://www.google.com/maps?q=Toronto,+Canada" target="_blank">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="24" height="24">
+                    <path d="M256 0c17.7 0 32 14.3 32 32l0 34.7C368.4 80.1 431.9 143.6 445.3 224l34.7 0c17.7 0 32 14.3 32 32s-14.3 32-32 32l-34.7 0C431.9 368.4 368.4 431.9 288 445.3l0 34.7c0 17.7-14.3 32-32 32s-32-14.3-32-32l0-34.7C143.6 431.9 80.1 368.4 66.7 288L32 288c-17.7 0-32-14.3-32-32s14.3-32 32-32l34.7 0C80.1 143.6 143.6 80.1 224 66.7L224 32c0-17.7 14.3-32 32-32zM128 256a128 128 0 1 0 256 0 128 128 0 1 0 -256 0zm128-80a80 80 0 1 1 0 160 80 80 0 1 1 0-160z"/>
+                </svg>
+                <span>Toronto, Canada</span>
+            </a>
+        </div>        
+    </div>
+</div>
+
+
+<!-- About Me Section -->
+<section id="about">
+    <h4>About Me</h4> <!-- Changed to h4 for consistency with Projects -->
+    <div class="about-container">
+        <div class="about-text">
+            <p>I am a passionate and dedicated Electronic Engineer currently pursuing a degree in Computer Science. 
+                My academic and professional experiences have equipped me with a strong foundation in electrical and 
+                electronic systems, programming, and problem-solving. I am eager to contribute my technical expertise 
+                and analytical skills to any dynamic and organized work environment. Whether it’s resolving complex 
+                electrical issues, developing innovative electronic solutions, or supporting technical projects, I am 
+                committed to delivering high-quality results and continuously expanding my knowledge in both fields.</p>
+        </div>
+        <div class="about-image">
+            <img src="img/IMG_7834.JPG" alt="Julian Campo" class="image">
+        </div>
+    </div>
+</section>
+
+
+
+
+<!-- Projects Section -->
+<!-- Projects Section -->
+    <section id="projects">
+        <h4>Projects</h4> <!-- This is where the title is defined -->
+        <div>
+            <!-- Project 1 Title -->
+            <div class="project-title">
+            <h3>Project 1 - Milestone Power Supply</h3>
+            </div>
+            <div class="project-item">
+                <video width="300" controls>
+                    <source src="img/Soldering55.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+                <div class="project-description">
+                    <p>The project involves building and programming a power supply by soldering components onto a PCB. 
+                    First, gather components like resistors, capacitors, diodes, and a voltage regulator. Next, solder the components 
+                    onto the PCB according to the schematic, ensuring correct placement and avoiding short circuits. Once assembled, 
+                    program the power supply to meet the desired voltage and current specifications. Finally, test the power supply 
+                    with a multimeter to verify output and troubleshoot any issues to ensure it functions properly.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    
+    <div>
+        <h3 class="project-title">Project 2 - Microstick Programming</h3>
+        <div class="project-item">
+            <video class="project2-video" controls>
+                <source src="img/IMG_8170.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+            <div class="project-description">
+                <div class="project-title"></div>
+                <p>
+                    Build a circuit through a transistor that collects the temperature of the environment, followed by 
+                    programming a code that displays options on an LCD screen by means of a numeric pad attached 
+                    to a breadboard.
+                </p>
+            </div>
+        </div>
+    </div>
+    
+    
+    <!-- Project 3 Section -->
+<div>
+    <h3 class="project-title">Project 3 - Radio and Receiver</h3>
+    <div class="project-item"> <!-- Flex container -->
+        <div class="project3-image">
+            <img class="image" src="img/RECIEVER.JPG" alt="Project 3 Screenshot">
+        </div>
+        <div class="project-description">
+            <p>
+                Build a radio and a receiver by soldering its components to test the frequency and voltage of the waves sent by the radio 
+                to the receiver.     
+            </p>
+        </div>
+    </div>
+</div>
+
+<section id="skills">
+    <h4>Skills</h4>
+    <div class="skills-container">
+        <div class="skill-item">Organized</div>
+        <div class="skill-item">Time Management</div>
+        <div class="skill-item">Teamwork</div>
+        <div class="skill-item">Adaptability</div>
+        <div class="skill-item">Safety Case Knowledge</div>
+        <div class="skill-item">Leadership</div>
+        <div class="skill-item">Analytical</div>
+        <div class="skill-item">Customer Service</div>
+        <div class="skill-item">Punctual</div>
+        <div class="skill-item">Electronic Devices Experience</div>
+        <div class="skill-item">Software</div>
+        <div class="skill-item">Hardware</div>
+        <div class="skill-item">Problem Solving</div>
+    </div>
+</section>
+
+
+<!-- Contact Section -->
+<section id="contact">
+    <h4>Contact</h4>
+    <form>
+        <div class="form-group">
+            <!-- Text Input -->
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required>
+        </div>
+
+        <div class="form-group">
+            <!-- Email Input -->
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+        </div>
+
+        <div class="form-group">
+            <!-- Radio Buttons -->
+            <label>Preferred contact method:</label><br>
+            <input type="radio" id="email-method" name="contact-method" value="email" required>
+            <label for="email-method">Email</label>
+            <input type="radio" id="phone-method" name="contact-method" value="phone">
+            <label for="phone-method">Phone</label>
+        </div>
+
+        <div class="form-group">
+            <!-- Checkboxes -->
+            <label>Subscribe to Newsletter:</label>
+            <input type="checkbox" id="subscribe" name="subscribe">
+        </div>
+
+        <div class="form-group">
+            <!-- Drop-Down -->
+            <label for="inquiry-type">Type of Inquiry:</label>
+            <select id="inquiry-type" name="inquiry-type" required>
+                <option value="general">General Inquiry</option>
+                <option value="support">Support</option>
+                <option value="feedback">Feedback</option>
+            </select>
+        </div>
+
+        <input type="submit" value="Submit">
+    </form>
+</section>
+
+
+     
+<!-- Footer Section -->
+<footer>
+    <p>Thank you for visiting!</p>
+    <p>Contact: myemail@example.com</p>
+</footer>
+
+</body>
+</html>
