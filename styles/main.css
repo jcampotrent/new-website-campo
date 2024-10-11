@@ -699,13 +699,13 @@ footer {
     }
 
      /* Project 2 video adjustments for mobile */
-   .project2-video {
-        width: 100%; /* Make sure it takes up the full width on mobile */
-        max-width: 400px; /* Optional: Set a maximum width for larger screens */
-        height: auto; /* Maintain aspect ratio */
-        display: block;
-        margin: 0 auto 20px auto; /* Center the video on mobile and add bottom margin */
-   }
+.project2-video {
+    width: 100%; /* Make sure it takes up the full width */
+    max-width: 600px; /* Set a maximum width for larger screens */
+    height: auto; /* Maintain aspect ratio */
+    display: block;
+    margin: 0 auto 20px auto; /* Center the video and add bottom margin */
+}
 
     /* Ensure project descriptions are centered and full width */
     .project-description {
