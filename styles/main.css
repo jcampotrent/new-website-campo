@@ -1,41 +1,60 @@
 /* Times New Roman for a classy look*/
+:root {
+    --primary-color: #3498db;   /* Blue */
+    --secondary-color: #2ecc71; /* Green */
+    --accent-color: #f39c12;    /* Yellow */
+    --text-color: #333;         /* Dark Gray */
+    --background-color: #f5f5f5;/* Light Gray */
+}
+
 
 body {
     font-family: 'Times New Roman', Times, serif;
     margin: 0; 
     padding: 0; 
+    display: grid;
+    grid-template-rows: auto 1fr; /* First row for header, second for content */
+    grid-template-columns: 1fr;
+    height: 100vh; /* Full height of the screen */
 
     /* backcolor, a bit grey */
     background-color: #f5f5f5;
 }
 
-
 /* Main Header */
 header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 10px 20px;
+    position: sticky;
+    top: 0;
     background-color: #333;
-    color: white;
+    padding: 10px 0;
+    z-index: 1000;
+    grid-column: 1 / -1; /* Make header span full width */
 }
 
-header h1 {
-    margin: 0;
-    font-size: 1.5em;
-    letter-spacing: 2px;
+button {
+    background-color: var(--secondary-color);
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: var(--accent-color);
 }
 
 
 nav ul {
-    list-style: none;
     display: flex;
+    justify-content: center;
     margin: 0;
     padding: 0;
+    list-style: none;
 }
 
 nav ul li {
-    margin: 0 15px;
+    margin: 0 20px;
 }
 
 nav ul li a {
@@ -43,10 +62,64 @@ nav ul li a {
     color: white;
     font-size: 1em;
     letter-spacing: 1px;
+    transition: color 0.3s ease;
 }
 
 nav ul li a:hover {
-    text-decoration: underline;
+    color: #f5a623; /* Highlight color on hover */
+}
+
+/* --------------------------------------------------------------- */
+
+/* BOXESSSS SECTION */
+.section-container {
+    position: relative;
+    padding: 50px 20px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* Three equal columns */
+    gap: 20px;
+}
+
+/* Fixed box (bottom-right) */
+.fixed-box {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: rgba(0, 0, 0, 0.8);
+    color: white;
+    padding: 20px;
+    border-radius: 8px;
+    z-index: 1000;
+}
+
+/* Absolute box (centered) */
+.absolute-box {
+    position: absolute;
+    top: 95%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: rgba(0, 0, 0, 0.8);
+    color: white;
+    padding: 20px;
+    border-radius: 8px;
+}
+
+/* Relative box (moved relative to its normal position) */
+.relative-box {
+    position: relative;
+    top: 400px;
+    left: 1100px;
+    background-color: rgba(0, 0, 0, 0.8);
+    color: white;
+    padding: 10px;
+    border-radius: 8px;
+    width: 170px
+}
+
+/* Content styling: About, Projects, etc. */
+main {
+    grid-column: 1 / -1; /* Makes main content take up the full width of the grid */
+    padding: 20px;
 }
 
 /* --------------------------------------------------------------- */
@@ -56,12 +129,14 @@ nav ul li a:hover {
     padding: 20px; /* Space CHANGE HERE! */
     border: 1px solid #ccc; 
     border-radius: 8px; /* Rounded */
-    background-color: #f9f9f9; 
+    background-color: rgba(249, 249, 249, 0.7);  /* Light background with opacity */
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); 
     text-align: center; 
     max-width: 600px; 
-    margin: 20px auto; 
+    margin: -10px auto; /* Move it up*/
+    backdrop-filter: blur(8px);  /* Frosted glass effect */
 }
+
 
 /* --------------------------------------------------------------- */
 .contact-info {
@@ -103,34 +178,8 @@ section {
     text-align: left; 
     margin-left: 20px; 
     font-size: 2em; 
-    color: rgb(53, 96, 97); 
+    color: black
 }
-
-/* Projects Section TITLE */
-#projects h4 {
-    text-align: left; 
-    margin-left: 20px; 
-    font-size: 2em; 
-    color: rgb(53, 96, 97); 
-}
-
-/* Skills Section TITLE */
-#skills h4 {
-    text-align: left; 
-    margin-left: 20px; 
-    font-size: 2em; 
-    color: rgb(53, 96, 97); 
-}
-
-/* Contact Section TITLE */
-#contact h4 {
-    text-align: left; 
-    margin-left: 20px; 
-    margin-top: 10px; 
-    font-size: 2em; 
-    color: rgb(53, 96, 97); 
-}
-
 
 
 /* About Me TEXT */
@@ -152,6 +201,15 @@ section {
     width: 300px; 
     height: auto; 
     border-radius: 10px; 
+}
+/* ---------------------------------------------------------- */
+
+/* PROJECT SECTION*/
+
+#projects h4 {
+    margin: 20px auto;
+    max-width: 800px;
+    font-size: 1.8em;
 }
 
 /* VIDEO 1 SETTINGS*/
@@ -208,13 +266,16 @@ video {
     font-weight: normal; 
 }
 
-
 /* ---------------------------------------------------------- */
 
 /* SKILLS FORMATING */
-#skills {
-    margin-top: 20px; 
+
+#skills h4 {
+    margin: 20px auto;
+    max-width: 800px;
+    font-size: 1.8em;
 }
+
 
 .skills-container {
     display: flex;
@@ -237,10 +298,10 @@ video {
 /* ------------------------------------------------ */
 
 /* CONTACT */
-#contact {
-    margin-top: 20px; 
-    display: flex;
-    justify-content: center; 
+#contact h4 {
+    margin: 20px auto;
+    max-width: 800px;
+    font-size: 1.8em;
 }
 
 form {
@@ -290,15 +351,115 @@ input[type="submit"]:hover {
     background-color: #555; 
 }
 
+/* --------------------------------------------------------------- */
 
-/* ------------------------------------------------ */
+/* ASSIGNMNET 2 STARTS HERE !!*/
 
-/* Footer Styles */
-footer {
-    text-align: center;
-    padding: 20px;
+/* EXPERIENCE */
+
+/* DONT DELET TABLE WOULD CHANGE */
+#experience {
+    margin: 20px auto;
+    max-width: 800px;
+}
+
+/* EXPERIENCE H4 CHANGE JUST TITLE*/
+#experience h4 {
+    margin: 20px auto;
+    font-size: 1.8em;
+}
+
+#experience table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+#experience th, #experience td {
+    padding: 12px;
+    border: 1px solid #ddd;
+    text-align: left;
+}
+
+#experience th {
     background-color: #333;
     color: white;
+}
+
+#experience tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+#experience tr:hover {
+    background-color: #f1f1f1;
+}
+/* --------------------------------------------------------------- */
+
+/* IMAGE CONTAINER NEW FEATURE */
+
+/* Image container with aspect-ratio */
+.image-container {
+    width: 100%;
+    aspect-ratio: 16 / 9;  /* 16:9 aspect ratio */
+    background-color: #ddd; /* Background for the container */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+.image-container img {
+    width: 100%;
+    height: auto;  /* Ensure the image respects the aspect ratio */
+}
+
+
+/* --------------------------------------------------------------- */
+
+/* TRANSITION AND TRANSFORM - BUTTON SETTINGS */
+button {
+    background-color: #4CAF50;
+    color: white;
+    font-size: 1em;
+    padding: 12px 20px;
+    border: none;
+    cursor: pointer;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+/* Hover Effect for Button */
+button:hover {
+    transform: scale(1.1) rotate(10deg);  /* Scale up and rotate */
+    background-color: #45a049;  /* Darker shade of green */
+}
+
+
+/* TRANSITION AND TRANSFORM - IMAGEPRJ3  */
+
+/* Image Styling */
+.project3-image {
+    width: 100%;
+    height: auto;
+    transition: transform 0.4s ease;
+}
+/* Hover Effect for Image */
+.project3-image :hover {
+    transform: scale(1.1);  /* Zoom in effect */
+}
+/* --------------------------------------------------------------- */
+
+/* --------------------------------------------------------------- */
+
+/* FOOOOTERR BRUFFVV */
+footer {
+    text-align: center;
+    padding-bottom: 20px;
+    padding-top: 20px;
+   
+
+    background-color: #333;
+    color: white;
+    width: 100%;   /* Ensure footer takes up the full width */
+    /* Ensure it behaves as expected with the rest of the layout */
 }
 
 
