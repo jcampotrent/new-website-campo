@@ -474,6 +474,17 @@ footer {
         gap: 15px;
         padding: 10px;
     }
+    .relative-box {
+        position: relative;
+        top: 0; /* Remove vertical offset */
+        left: 50%; /* Center horizontally */
+        transform: translateX(-50%); /* Ensure the box is centered */
+        background-color: rgba(0, 0, 0, 0.8);
+        color: white;
+        padding: 10px;
+        border-radius: 8px;
+        width: 170px;
+    }
     
     body {
         font-size: 14px; /* FONT IPHONE*/
@@ -494,15 +505,6 @@ footer {
     nav ul li {
         margin: 10px 0; 
     }
-
-    /* BOX FIXED POSITION */
-    .relative-box {
-        position: relative;
-        top: 95%;
-        left: 50%;
-    
-    }
-
 
     /* Intro box ADJUST VERTICALLY*/
     .intro-box {
