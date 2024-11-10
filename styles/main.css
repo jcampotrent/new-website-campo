@@ -497,7 +497,10 @@ footer {
 
     /* BOX FIXED POSITION */
     .relative-box {
-        position: absolute;
+        position: relative;
+        top: 95%;
+        left: 50%;
+    
     }
 
 
