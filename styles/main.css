@@ -496,18 +496,8 @@ footer {
     }
 
     .relative-box {
-        position: relative;
-        top: 0; /* Remove vertical offset */
-        left: 50%; /* Center horizontally */
-        transform: translateX(-50%); /* Ensure the box is centered */
-        background-color: rgba(0, 0, 0, 0.8);
-        color: white;
-        padding: 10px;
-        border-radius: 8px;
-        width: 170px;
+        position: center;
     }
-
-
 
 
     /* Intro box ADJUST VERTICALLY*/
