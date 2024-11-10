@@ -468,6 +468,12 @@ footer {
 /* CODE FOR MOBILE*/
 
 @media (max-width: 768px) {
+    .projects-container {
+        grid-template-columns: 1fr; /* Stack items in one column on mobile */
+        gap: 15px;
+        padding: 10px;
+    }
+    
     body {
         font-size: 14px; /* FONT IPHONE*/
     }
