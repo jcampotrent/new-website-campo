@@ -495,8 +495,9 @@ footer {
         margin: 10px 0; 
     }
 
+    /* BOX FIXED POSITION */
     .relative-box {
-        position: center;
+        position: absolute;
     }
 
 
